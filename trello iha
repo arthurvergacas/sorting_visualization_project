@@ -1,0 +1,54 @@
+----- TO DO ----
+
+
+- make it more legible
+- find and handle bugs
+	[TO DO]
+		-
+	[DONE]
+		- imgs objects are created independently (is it spelled right?), so no more bugs with the multi-threading
+
+- find a way to stop the threads while they are running (so the user can close the program while the sorting procces is happening (DONE with daemon(threads that close with the main thread) threads), and also cancel it if he wish so)
+	- add a button to stop proccessing
+
+
+
+
+
+---- DOING -----
+
+
+
+
+
+
+
+----- DONE -----
+
+- code sorting algorithm
+- create gui for it
+- create buttons in the gui
+- move results from console to gui 
+- implement user input on gui // code commented in sorting.py
+- implement feature to pick random number (big arrays) //  also commented in sorting.py <-- uses numpy (no it doesn't use numpy you IDIOT)
+- create animations frames with Pillow (PIL thing ----> Python Image Library)
+- changed how the big array generation works (now is random but in order)  
+- handle merge sort problem (should I re-implement it? or i should just say that merge sort animation is not available?)
+	- think more about it maybe
+	- don't cry ;-;
+- optmize merge sort image creation (and all the other too)
+- always delete previous files
+- create some form of visualization (maybe with bars?)
+	- maybe use steps from each function to determine how much images there are
+	- (EDIT FROM THE FUTURE) now I use the amount of images in the respective folder
+- optimize image creation (always make different frames)
+- HUUUGE OPTIMIZATION (with threading) - and also loading system
+- threading everything
+- make animation time dynamic (suitable to the array size)
+- enhance loading (??)
+- now all the threads can be executed at the same time (IEIIII)
+- change loading to show the load of each sort
+- fix the weird image creation that happens with some numbers (like 10, or 30, you know)
+- make the animation interface user-friendly (add buttons and stuff)
+	- add button to close the animation
+- clean that damn animation code please

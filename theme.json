@@ -1,0 +1,90 @@
+{
+	"defaults":
+	{
+		"font":
+		{
+
+			"name": "regular_openSans",
+			"size": "16",
+			"bold": 0,
+			"italic": 0,
+			"regular_path": "./fonts/OpenSans-Regular.ttf"
+
+
+		}
+
+	},
+
+	"#play_button":
+	{
+		"images": 
+		{
+			"normal_image":
+			{
+				"path": "buttons/play.png"
+			}
+		}
+	},
+
+	"#pause_button":
+	{
+		"images": 
+		{
+			"normal_image":
+			{
+				"path": "./buttons/pause.png"
+			}
+		}
+	},
+
+	"#forward_button":
+	{
+		"images": 
+		{
+			"normal_image":
+			{
+				"path": "./buttons/forward.png"
+			}
+		}
+	},
+
+	"#backward_button":
+	{
+		"images": 
+		{
+			"normal_image":
+			{
+				"path": "./buttons/backward.png"
+			}
+		}
+	},
+
+	"button":
+	{
+		"font":
+		{
+
+			"name": "bold_openSans",
+			"size": "16",
+			"bold": 0,
+			"italic": 0,
+			"regular_path": "./fonts/OpenSans-SemiBold.ttf"
+
+
+		}		
+	},
+
+	"text_entry_line":
+	{
+	    "font":
+	    {
+			"name": "regular_openSans",
+			"size": "14",
+			"bold": 0,
+			"italic": 0,
+			"regular_path": "./fonts/OpenSans-Regular.ttf"
+        }		
+	}
+
+
+}
