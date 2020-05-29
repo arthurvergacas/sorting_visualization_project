@@ -10,4 +10,6 @@
 
 It also includes **custom and random array creation** to test the sortings, and a *not yet beautiful* timer of how fast the sort proceeded.
 
+I made this project to learn pygame and also some python. If you want to make any contribution to the project, please do so. I would be glad to see what are your suggestions :)
+
 
