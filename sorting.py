@@ -164,8 +164,6 @@ class SortingMethods:
 	def MergeSort(self, array):
 
 
-		global temp, steps, count, original
-
 		if self.merge_bool_s:
 			self.steps = 0
 			self.count = 0
