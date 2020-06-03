@@ -58,7 +58,7 @@ class SortGUI:
 
 
 
-		self.custom_array_button = pygame_gui.elements.UIButton(relative_rect = pygame.Rect(475, 40, 200, 50), text = "Create Custom Array", manager = self.ui_manager)
+		self.custom_array_button = pygame_gui.elements.UIButton(relative_rect = pygame.Rect(475, 40, 250, 50), text = "Create Custom Array", manager = self.ui_manager)
 
 
 
@@ -70,7 +70,7 @@ class SortGUI:
 
 
 
-		self.create_array_button = pygame_gui.elements.UIButton(relative_rect = pygame.Rect(475, 142, 200, 50), text = "Create Random Array", manager = self.ui_manager)		
+		self.create_array_button = pygame_gui.elements.UIButton(relative_rect = pygame.Rect(475, 142, 250, 50), text = "Create Random Array", manager = self.ui_manager)		
 
 
 
@@ -92,6 +92,12 @@ class SortGUI:
 		#warning that the user haven't set an input value
 		self.warn_no_input = self.bold_font.render("You must first type an array, or set minimun and maximum values", True, (255, 255, 255))
 
+		#array created text
+		self.array_created_text = self.large_bold_font.render("Array Created", True, (255, 255, 255))
+
+		#"made by" text
+		self.made_by_text = self.regular_font.render("Made by Arthur Vergaças", True, (150, 150, 150))
+
 
 		#----SORT TEXT BOOLEANS--------
 		self.selec_bool = False
@@ -106,6 +112,9 @@ class SortGUI:
 
 		self.no_input = False
 		self.no_input_sleep = 0
+
+		self.array_created = False
+		self.array_created_sleep = 0
 
 
 
@@ -347,13 +356,13 @@ class SortGUI:
 
 		self.window_surface.blit(self.creating_loading[self.index_creating], (x_pos, y_pos))
 
-
-
 	
 	
 
 	#------MAIN LOOP------
 	def run(self):
+
+
 		while self.is_running:
 
 			delta_time = self.clock.tick(30)/1000.0
@@ -505,7 +514,9 @@ class SortGUI:
 								self.no_array_bool = False
 
 								ani_time = 0.1 / (len(SortGUI.number) * 0.015)
-								print(ani_time)								
+								print(ani_time)		
+								self.array_created = True
+										
 							else:
 								self.no_input = True
 								
@@ -528,6 +539,7 @@ class SortGUI:
 									
 									ani_time = 0.1 / (len(SortGUI.number) * 0.025)
 									print(ani_time)
+									self.array_created = True
 								else:
 									self.no_input = True
 									
@@ -556,27 +568,30 @@ class SortGUI:
 			self.window_surface.blit(self.min_text, (40, 140))
 			self.window_surface.blit(self.max_text, (40, 175))
 
+			#display made by text
+			self.window_surface.blit(self.made_by_text, (620, 7))
+
 
 
 			#if statements for text
 			if self.selec_bool and self.selec_bool_text_thread:
-				self.window_surface.blit(self.ui_selec_text, (35, 200))
+				self.window_surface.blit(self.ui_selec_text, (35, 250))
 
 			if self.bubble_bool and self.bubble_bool_text_thread:
-				self.window_surface.blit(self.ui_bubble_text, (227, 200))
+				self.window_surface.blit(self.ui_bubble_text, (227, 250))
 
 			if self.insert_bool and self.insert_bool_text_thread:
-				self.window_surface.blit(self.ui_insert_text, (419, 200))
+				self.window_surface.blit(self.ui_insert_text, (419, 250))
 
 			if self.merge_bool and self.merge_bool_text_thread:
-				self.window_surface.blit(self.ui_merge_text, (611, 200))
+				self.window_surface.blit(self.ui_merge_text, (611, 250))
 
 			if self.no_array_bool:
 				self.window_surface.blit(self.warn_no_array, (no_array_x, no_array_y))
 
 				self.no_array_sleep += 1
 				
-				if self.no_array_sleep > 200:
+				if self.no_array_sleep > 250:
 					self.no_array_bool = False
 					self.no_array_sleep = 0
 
@@ -588,9 +603,18 @@ class SortGUI:
 
 				self.no_input_sleep += 1
 
-				if self.no_input_sleep > 200:
+				if self.no_input_sleep > 250:
 					self.no_input = False
 					self.no_input_sleep = 0
+			
+			if self.array_created:
+				self.window_surface.blit(self.array_created_text, (340, 430))
+
+				self.array_created_sleep += 1
+
+				if self.array_created_sleep > 60:
+					self.array_created = False
+					self.array_created_sleep = 0
 
 
 			#ANIMATIONS
