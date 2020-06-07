@@ -10,7 +10,6 @@ Merge Sort       <----- O(n log n), ou seja, se eu aumento n 10 vezes, o tempo
 '''
 from timeit import default_timer as timer
 from image_creator import CreateImages
-import numpy
 import random
 
 

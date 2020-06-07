@@ -10,8 +10,8 @@ class Animations:
 		x = []
 		path = './images/{}'.format(directory)
 
-		for j in range(len(os.listdir(path))):
-			file = '{}/img{}.jpg'.format(path, j)
+		for i in range(len(os.listdir(path))):
+			file = '{}/img{}.jpg'.format(path, i)
 
 			x.append(pygame.image.load(file))
 			

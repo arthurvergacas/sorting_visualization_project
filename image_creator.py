@@ -34,7 +34,6 @@ class CreateImages:
 
 		self.draw.rectangle([0, 0, self.WIDTH, self.HEIGHT], fill = ("#4D4D4D"))
 
-		x = array
 		self.previous_arrays.append(array.copy())
 
 		greatest = array[0]
@@ -74,7 +73,6 @@ class CreateImages:
 
 		path = './images/{}'.format(directory)
 		files = os.scandir(path)
-		x = 0
 
 		for i in files:
 			if os.path.exists(i):
@@ -104,5 +102,5 @@ if __name__ == "__main__":
 	x = list(range(1 + 1, 5000 + 1))
 	random.shuffle(x)
 
-	clss.create_frame(x, len(x), 0, 'bubble')
+	clss.create_frame(x, len(x), 'bubble')
 
