@@ -4,9 +4,6 @@ Bubble Sort      | <--- O(n^2), ou seja, se eu aumento n 10 vezes, o tempo
 Insertion Sort   |       de execução aumenta 100 vezes (10^2) 
 Merge Sort       <----- O(n log n), ou seja, se eu aumento n 10 vezes, o tempo 
                         vai aumentar mais ou menos 10 vezes (10 log 10 = 10)
-
-
-
 '''
 from timeit import default_timer as timer
 from image_creator import CreateImages
@@ -162,7 +159,6 @@ class SortingMethods:
 
 	def MergeSort(self, array):
 
-
 		if self.merge_bool_s:
 			self.steps = 0
 			self.count = 0
@@ -303,5 +299,3 @@ if __name__ == "__main__":
 	# BubbleSort(numbers)
 	# print(clss.InsertionSort(numbers))
 	# clss.MergeSort(numbers)
-
-
